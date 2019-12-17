@@ -1,0 +1,28 @@
+{
+  "name": "Airbnb-photos-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js",
+    "start-node": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacker-home/Airbnb-photos-proxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hacker-home/Airbnb-photos-proxy/issues"
+  },
+  "homepage": "https://github.com/hacker-home/Airbnb-photos-proxy#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.19.1",
+    "nodemon": "^1.19.1"
+  }
+}

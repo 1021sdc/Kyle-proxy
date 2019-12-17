@@ -1,0 +1,33 @@
+#airbnb_reviews {
+  margin-left: 50px;
+}
+
+.booking-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 50px;
+  float: right;
+  z-index: 100;
+}
+
+#info {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#reviews {
+  margin-left: 150px;
+  margin-top: 30px;
+}
+
+.info-and-reviews-container {
+  margin-top: 50px;
+  margin-left: 50px;
+  z-index: 1;
+}
+
+#moreHomes {
+  display: fixed;
+  margin-left: 6.5%;
+}
