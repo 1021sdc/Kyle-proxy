@@ -1,3 +1,4 @@
+const nr = require('newrelic');
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -17,7 +18,7 @@ app.get('/photos/:id', (req, res) => {
 
 app.get('/listings/:id', (req, res) => {
   const { id } = req.params;
-  res.redirect(`http://54.153.105.148:3002/listings/${id}`);
+  res.redirect(`http://localhost:3002/listings/${id}`);
 })
 
 // app.get('/booking', (req, res) => {
@@ -41,32 +42,35 @@ app.get('/reviews/:id/', (req, res) => {
 //   res.redirect(`http://3.14.81.50/MoreHomes`);
 // })
 
-app.use('/MoreHomes',
-  proxy({
-    target: 'http://3.14.81.50/MoreHomes',
-      pathRewrite: (path, req) => {
-        return path.split('/').slice(2).join('/');
-      }
-    })
-);
 
-app.use('/booking',
-  proxy({
-    target: 'http://52.53.211.152:3333/booking',
-      pathRewrite: (path, req) => {
-        return path.split('/').slice(2).join('/');
-      }
-    })
-);
+// ##################################################################
+// Uncomment out to remake proxy connections
+// app.use('/MoreHomes',
+//   proxy({
+//     target: 'http://3.14.81.50/MoreHomes',
+//       pathRewrite: (path, req) => {
+//         return path.split('/').slice(2).join('/');
+//       }
+//     })
+// );
 
-app.use('/room',
-  proxy({
-    target: 'http://52.53.211.152:3333/room',
-      pathRewrite: (path, req) => {
-        return path.split('/').slice(2).join('/');
-      }
-    })
-);
+// app.use('/booking',
+//   proxy({
+//     target: 'http://52.53.211.152:3333/booking',
+//       pathRewrite: (path, req) => {
+//         return path.split('/').slice(2).join('/');
+//       }
+//     })
+// );
+
+// app.use('/room',
+//   proxy({
+//     target: 'http://52.53.211.152:3333/room',
+//       pathRewrite: (path, req) => {
+//         return path.split('/').slice(2).join('/');
+//       }
+//     })
+// );
 
 app.listen(port, () => {
     console.log('Server is listening on port 8080')

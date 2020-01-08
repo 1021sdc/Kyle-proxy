@@ -5,4 +5,5 @@ Airbnb-photos
 Airbnb-reviews
 node_modules
 package-lock.json
-
+newrelic.js
+newrelic_agent.log
